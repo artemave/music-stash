@@ -1,0 +1,10 @@
+Music player that plays media stored in S3.
+
+First release should allow me to do the following:
+
+1. Authenticate
+2. Upload mp3 (with indexing Genre/Band/Album/Song)
+3. Browse music: Genre/Band/Album
+4. Play: Genre/Band/Album/Song
+
+The main goal of the project is to keep me uptodate with rails, backbone, html5, etc.
