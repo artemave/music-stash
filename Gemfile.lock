@@ -65,6 +65,8 @@ GEM
     erubis (2.7.0)
     execjs (1.2.9)
       multi_json (~> 1.0)
+    factory_girl (2.3.0)
+      activesupport
     ffi (1.0.11)
     gherkin (2.6.6)
       json (>= 1.4.6)
@@ -199,6 +201,7 @@ DEPENDENCIES
   cucumber-rails
   database_cleaner
   ejs
+  factory_girl
   growl_notify
   guard-cucumber
   guard-rspec

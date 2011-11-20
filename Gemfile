@@ -41,6 +41,7 @@ group :test, :development do
   gem 'guard-rspec'
   gem 'database_cleaner'
   gem 'pry'
+  gem 'factory_girl'
 
   if RUBY_PLATFORM =~ /darwin/i
     gem 'rb-fsevent'
