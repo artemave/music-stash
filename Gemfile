@@ -30,10 +30,24 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-group :test do
+group :test, :development do
   # Pretty printed test output
   gem 'turn', '~> 0.8.3', :require => false
+  gem 'cucumber-rails'
+  gem 'rspec-rails'
+  gem 'spork', '~> 0.9.0.rc'
+  gem 'guard-spork'
+  gem 'guard-cucumber'
+  gem 'guard-rspec'
+  gem 'database_cleaner'
+  gem 'pry'
+
+  if RUBY_PLATFORM =~ /darwin/i
+    gem 'rb-fsevent'
+    gem 'growl_notify'
+  end
 end
 
 gem 'rails-backbone'
 gem 'ejs'
+gem 'haml-rails'
