@@ -2,10 +2,11 @@ require 'spork'
  
 Spork.prefork do
   require 'cucumber/rails'
-
+  require_relative 'knows_about_paths'
 
   Capybara.default_selector = :css
 
+  World(KnowsAboutPaths)
 end
  
 Spork.each_run do

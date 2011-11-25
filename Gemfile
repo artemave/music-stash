@@ -39,9 +39,11 @@ group :test, :development do
   gem 'guard-spork'
   gem 'guard-cucumber'
   gem 'guard-rspec'
+  gem 'guard-bundler'
   gem 'database_cleaner'
   gem 'pry'
   gem 'factory_girl'
+  gem 'shoulda-matchers'
 
   if RUBY_PLATFORM =~ /darwin/i
     gem 'rb-fsevent'
