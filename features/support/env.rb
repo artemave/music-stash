@@ -2,6 +2,7 @@ require 'spork'
  
 Spork.prefork do
   require 'cucumber/rails'
+  require 'factory_girl/step_definitions'
   require_relative 'knows_about_paths'
 
   Capybara.default_selector = :css

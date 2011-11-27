@@ -42,7 +42,7 @@ group :test, :development do
   gem 'guard-bundler'
   gem 'database_cleaner'
   gem 'pry'
-  gem 'factory_girl'
+  gem 'factory_girl_rails'
   gem 'shoulda-matchers'
 
   if RUBY_PLATFORM =~ /darwin/i

@@ -1,12 +1,12 @@
 Given /^I am logged in$/ do
-  @current_user = User.create
+  @current_user = FactoryGirl.create(:user)
 end
 
 Given /^there are the following songs in my collection:$/ do |table|
-  @current_user.create_collection
+  @current_user.create_collection!
 
   table.hashes.each do |song|
-    @current_user.collection.songs << Song.new(name: song)
+    @current_user.collection.songs << FactoryGirl.create(:song, name: song)
   end
 end
 
