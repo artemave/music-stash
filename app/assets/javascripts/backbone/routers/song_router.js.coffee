@@ -2,7 +2,7 @@ class MusicStash.Routers.SongsRouter extends Backbone.Router
   initialize: (options) ->
     
   routes:
-    "/index": "index"
+    "": "index"
     
   index: ->
     @view = new MusicStash.Views.Songs.IndexView()

@@ -10,3 +10,6 @@ window.MusicStash =
   Collections: {}
   Routers: {}
   Views: {}
+  init: ->
+    new MusicStash.Routers.SongsRouter()
+    Backbone.history.start()

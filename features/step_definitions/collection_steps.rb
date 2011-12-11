@@ -1,12 +1,13 @@
-Given /^I am logged in$/ do
-  @current_user = FactoryGirl.create(:user)
+Given /^I have the following songs:$/ do |table|
+  @songs = []
+  table.hashes.each do |row|
+    @songs << Tempfile.new(row['file_name'])
+  end
 end
 
-Given /^there are the following songs in my collection:$/ do |table|
-  @current_user.create_collection!
-
-  table.hashes.each do |song|
-    @current_user.collection.songs << FactoryGirl.create(:song, name: song)
+When /^I upload them into MusicStash$/ do
+  @songs.each do |s|
+    `bundle exec music-stash add #{s}`
   end
 end
 
@@ -14,9 +15,9 @@ When /^I view my collection$/ do
   visit collection_path
 end
 
-Then /^I should see:$/ do |table|
-  find('#song_list')
-  song_names = all('#song_list .song').map(&:text)
+Then /^I should see them in my collection$/ do
+  find('#songs')
+  song_names = all('#songs .song').map(&:text)
 
-  @current_user.collection.songs.map(&:name) =~ song_names
+  song_names.should =~ @songs.map {|s| File.basename(s.path) }
 end
