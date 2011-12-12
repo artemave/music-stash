@@ -1,6 +1,16 @@
 require File.expand_path('../boot', __FILE__)
 
-require 'rails/all'
+%w(
+  action_controller
+  action_mailer
+  active_resource
+  sprockets
+).each do |framework|
+  begin
+    require "#{framework}/railtie"
+  rescue LoadError
+  end
+end
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -44,5 +54,10 @@ module MusicStash
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.generators do |g|
+      g.view_specs false
+      g.helper_specs false
+    end
   end
 end

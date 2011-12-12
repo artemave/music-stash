@@ -5,8 +5,8 @@ gem 'rails', '3.1.2'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-
+gem 'mongoid'
+gem 'bson_ext'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -32,6 +32,7 @@ gem 'jquery-rails'
 
 group :test, :development do
   # Pretty printed test output
+  gem 'mongoid-rspec'
   gem 'turn', '~> 0.8.3', :require => false
   gem 'cucumber-rails'
   gem 'rspec-rails'

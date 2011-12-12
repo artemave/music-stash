@@ -13,6 +13,7 @@ end
 Spork.each_run do
   ActionController::Base.allow_rescue = false
   
+  DatabaseCleaner.orm = 'mongoid'
   DatabaseCleaner.strategy = :truncation
   
   # You may also want to configure DatabaseCleaner to use different strategies for certain features and scenarios.
