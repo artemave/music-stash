@@ -33,7 +33,6 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :test, :development do
-  # Pretty printed test output
   gem 'mongoid-rspec'
   gem 'turn', '~> 0.8.3', :require => false
   gem 'cucumber-rails'
@@ -43,6 +42,8 @@ group :test, :development do
   gem 'guard-cucumber'
   gem 'guard-rspec'
   gem 'guard-bundler'
+  gem 'guard-jasmine'
+  gem 'jasminerice'
   gem 'database_cleaner'
   gem 'pry'
   gem 'factory_girl_rails'
