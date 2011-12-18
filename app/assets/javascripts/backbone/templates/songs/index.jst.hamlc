@@ -1,0 +1,2 @@
+%h1 Song#index
+%p Find me in app/assets/javascripts/backbone/templates/songs/index.jst.hamlc

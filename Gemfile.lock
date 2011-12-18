@@ -96,6 +96,9 @@ GEM
       activesupport (~> 3.0)
       haml (~> 3.0)
       railties (~> 3.0)
+    haml_coffee_assets (0.5.3)
+      execjs (~> 1.2.9)
+      rails (>= 3.1)
     hike (1.2.1)
     i18n (0.6.0)
     jquery-rails (1.0.18)
@@ -218,7 +221,7 @@ DEPENDENCIES
   coffee-rails (~> 3.1.1)
   cucumber-rails
   database_cleaner
-  ejs
+  execjs
   factory_girl_rails
   growl_notify
   guard-bundler
@@ -226,6 +229,7 @@ DEPENDENCIES
   guard-rspec
   guard-spork
   haml-rails
+  haml_coffee_assets
   jquery-rails
   mongoid
   mongoid-rspec
