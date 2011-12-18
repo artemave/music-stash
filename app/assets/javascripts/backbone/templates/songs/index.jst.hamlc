@@ -1,2 +1,11 @@
-%h1 Song#index
-%p Find me in app/assets/javascripts/backbone/templates/songs/index.jst.hamlc
+%table
+  - if this.songs
+    %thead
+      %tr
+        %th Name
+    %tbody
+      - this.songs.each (song) ->
+        %tr
+          %td= song.get('name')
+  - else
+    # This collection appears to be empty
