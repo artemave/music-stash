@@ -10,6 +10,11 @@ window.MusicStash =
   Collections: {}
   Routers: {}
   Views: {}
-  init: ->
+  init: (songs = {}) ->
     new MusicStash.Routers.SongsRouter()
-    Backbone.history.start()
+
+    @songs = new MusicStash.Collections.SongsCollection(songs)
+
+    if not Backbone.history.started
+      Backbone.history.start()
+      Backbone.history.started = true
