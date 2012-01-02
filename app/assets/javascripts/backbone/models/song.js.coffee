@@ -6,4 +6,4 @@ class MusicStash.Models.Song extends Backbone.Model
   
 class MusicStash.Collections.SongsCollection extends Backbone.Collection
   model: MusicStash.Models.Song
-  url: '/songs'
+  url: '/songs.json'

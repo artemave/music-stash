@@ -14,12 +14,12 @@ When /^I upload them into MusicStash$/ do
 end
 
 When /^I view my collection$/ do
-  visit collection_path
+  visit root_path
 end
 
 Then /^I should see them in my collection$/ do
   find('#songs')
-  song_names = all('#songs .song').map(&:text)
+  song_names = all('#songs td').map(&:text)
 
   song_names.should =~ @songs.map {|s| File.basename s }
 end

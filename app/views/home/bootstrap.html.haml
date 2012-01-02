@@ -1,4 +1,4 @@
 = content_for :javascript do
-  window.MusicStash.init();
+  window.MusicStash.init(#{raw @songs.to_json});
 
 #songs

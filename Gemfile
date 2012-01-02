@@ -33,6 +33,9 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :test, :development do
+  gem 'awesome_print'
+  gem 'pry'
+  gem 'pry-doc'
   gem 'mongoid-rspec'
   gem 'turn', '~> 0.8.3', :require => false
   gem 'cucumber-rails'
